@@ -5,11 +5,11 @@
 
 В комплекте учебный REST API с данными в памяти. Витрина обращается к нему только по HTTP.
 
+Vercel - https://forrest-camp.vercel.app/
+
 ## Стек
 
 Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui + Radix UI
-
-Vercel - https://forrest-camp.vercel.app/catalog?from=2026-10-20&to=2026-10-22
 
 ![Главный экран Forest Camp](screens/main.jpeg)
 
