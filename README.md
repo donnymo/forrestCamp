@@ -9,6 +9,8 @@
 
 Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui + Radix UI
 
+Vercel - https://forrest-camp.vercel.app/catalog?from=2026-10-20&to=2026-10-22
+
 ![Главный экран Forest Camp](screens/main.jpeg)
 
 ## Запуск
