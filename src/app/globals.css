@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-script: var(--font-script);
+  --font-brand: var(--font-brand);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-tint: var(--primary-tint);
+  --color-primary-active: var(--primary-active);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  /* Тема Forest Camp: хвоя, ночь, кора, крем. */
+  --color-night: var(--night);
+  --color-bark: var(--bark);
+  --color-bark-light: var(--bark-light);
+  --color-bark-text: var(--bark-text);
+  --color-tan: var(--tan);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-paper: var(--paper);
+  --color-paper-line: var(--paper-line);
+  --color-shimmer: var(--shimmer);
+  /* Состояния наличия. */
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-dot: var(--warning-dot);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-line: var(--warning-line);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #1f4d3a;
+  --primary-foreground: #ffffff;
+  --primary-soft: #e8f0eb;
+  /* Выбранная карточка-переключатель и нажатая кнопка. */
+  --primary-tint: #f1f6f2;
+  --primary-active: #163a2b;
+  --secondary: #f7f4ee;
+  --secondary-foreground: #1c1917;
+  --muted: #f7f4ee;
+  --muted-foreground: #6b6460;
+  --accent: #f7f4ee;
+  --accent-foreground: #1c1917;
+  --destructive: #dc2626;
+  --border: #e2dbd0;
+  --input: #e2dbd0;
+  --ring: #1f4d3a;
+  --night: #13221d;
+  --bark: #5c3a21;
+  --bark-light: #9c6b3f;
+  --bark-text: #8a5a2b;
+  --tan: #d6b38a;
+  --cream: #fbf7f0;
+  --sand: #f7f4ee;
+  --line: #ece7df;
+  /* Пунктир пустых состояний. */
+  --line-strong: #d6cdbf;
+  /* «Бумажные» карточки: характеристики, правила, сводка заказа. */
+  --paper: #fffaf2;
+  --paper-line: #efe6d8;
+  /* Скелетоны загрузки на кремовом фоне. */
+  --shimmer: #efe8dd;
+  --success: #15803d;
+  --success-soft: #ecfdf3;
+  --warning: #7c4a1e;
+  --warning-dot: #a0692f;
+  --warning-soft: #f8f1e6;
+  --warning-line: #e6d2b5;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  /* Градиент «кора» — акцентные кнопки и плашки. */
+  .bg-bark-gradient {
+    background-image: linear-gradient(135deg, var(--bark), var(--bark-light));
+  }
+  .shadow-bark {
+    box-shadow: 0 10px 22px -10px rgb(92 58 33 / 0.6);
+  }
+  .shadow-lift {
+    box-shadow: 0 1px 2px rgb(28 25 23 / 0.06), 0 10px 24px -12px rgb(28 25 23 / 0.18);
+  }
+  .shadow-panel {
+    box-shadow: 0 24px 48px -24px rgb(28 25 23 / 0.28);
+  }
+  /* Горизонтальные ленты на телефоне (вкладки категорий): листаются пальцем, полоса не нужна. */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
