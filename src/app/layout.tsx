@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Caveat, Geist, Kaushan_Script, Montserrat } from "next/font/google";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { AuthProvider } from "@/components/auth/AuthProvider";
-import { ScenarioPanel } from "@/components/ScenarioPanel";
+// import { ScenarioPanel } from "@/components/ScenarioPanel";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <CartProvider>
             <SiteHeader />
             <main className="flex w-full flex-1 flex-col">{children}</main>
-            <ScenarioPanel />
+            {/* <ScenarioPanel /> */}
             <Toaster theme="light" position="bottom-right" />
           </CartProvider>
         </AuthProvider>
